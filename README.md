@@ -1,5 +1,5 @@
 # Trueman
-[![Build Status](https://travis-ci.org/CodingZeal/trueman.svg)](https://travis-ci.org/CodingZeal/trueman)[![Code Climate](https://codeclimate.com/github/CodingZeal/trueman/badges/gpa.svg)](https://codeclimate.com/github/CodingZeal/trueman)
+[![Build Status](https://travis-ci.org/CodingZeal/trueman.svg)](https://travis-ci.org/CodingZeal/trueman) [![Code Climate](https://codeclimate.com/github/CodingZeal/trueman/badges/gpa.svg)](https://codeclimate.com/github/CodingZeal/trueman)
 
 *Introducing: The World's (Almost) Smallest RubyGem*
 
