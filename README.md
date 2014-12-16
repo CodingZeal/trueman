@@ -1,10 +1,10 @@
 # Trueman
 [![Build Status](https://travis-ci.org/CodingZeal/trueman.svg)](https://travis-ci.org/CodingZeal/trueman) [![Code Climate](https://codeclimate.com/github/CodingZeal/trueman/badges/gpa.svg)](https://codeclimate.com/github/CodingZeal/trueman) [![Gem Version](https://badge.fury.io/rb/trueman.svg)](http://badge.fury.io/rb/trueman)
 
-*Introducing: The World's (Almost) Smallest RubyGem*
+*Introducing: The World's Smallest RubyGem... (almost)*
 
 Assert if a value matches one of the common forms of true or false with
-this little (ruby)gem :)
+this little gem.
 
 ## Installation
 
@@ -25,6 +25,7 @@ Trueman is designed to assert if a value is true.  It does not test for
 
 ```ruby
 Trueman.truthy? 1      # => true
+Trueman.truthy? "1"    # => true
 Trueman.truthy? "t"    # => true
 Trueman.truthy? "T"    # => true
 Trueman.truthy? true   # => true
@@ -32,6 +33,7 @@ Trueman.truthy? "true" # => true
 Trueman.truthy? "TRUE" # => true
 
 Trueman.falsy? 0       # => true
+Trueman.falsy? "0"     # => true
 Trueman.falsy? "f"     # => true
 Trueman.falsy? "F"     # => true
 Trueman.falsy? false   # => true
@@ -53,7 +55,7 @@ means you can remove values, expose values or do anything else you can
 do on an enumerable array.
 
 ```ruby
-Trueman.true_values # => [1,'t','T',true,'true','TRUE']
+Trueman.true_values # => [1, "1", 't', 'T', true, 'true', 'TRUE']
 ```
 
 Although it's discouraged, you can patch `Object`:
@@ -63,7 +65,8 @@ Trueman.patch_object!
 "true".truthy? # => true
  1.truthy?     # => true
  0.falsy?      # => true
-# ...
+ 
+ # ...
 ```
 
 ## Credits
