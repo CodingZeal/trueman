@@ -1,4 +1,4 @@
-#require "trueman/version"
+require "trueman/version"
 
 module Trueman
   TRUE_VALUES  = [true,  1, '1', 't', 'T', 'true',  'TRUE']
