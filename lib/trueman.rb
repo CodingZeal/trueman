@@ -1,4 +1,4 @@
-require "trueman/version"
+#require "trueman/version"
 
 module Trueman
   TRUE_VALUES  = [true,  1, '1', 't', 'T', 'true',  'TRUE']
@@ -18,5 +18,17 @@ module Trueman
 
   def self.false_values
     @@false_values ||= FALSE_VALUES
+  end
+
+  def self.patch_object!
+    Object.class_eval do
+      def truthy?
+        Trueman.truthy? self
+      end unless self.class.respond_to?(:truthy?)
+
+      def falsy?
+        Trueman.falsy? self
+      end unless self.class.respond_to?(:falsy?)
+    end
   end
 end
