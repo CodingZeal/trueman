@@ -22,7 +22,7 @@ describe Trueman do
   end
 
   describe 'determine a falsy value' do
-    [0, false, "false", "FALSE", "f", "F"].each do |value|
+    [0, false, "false", "FALSE", "0", "f", "F"].each do |value|
       it "returns true for the value #{value}" do
         expect(Trueman.falsy?(value)).to eq true
       end
@@ -30,7 +30,7 @@ describe Trueman do
   end
 
   describe 'determine a truthy value' do
-    [1, true, "true", "TRUE", "t", "T"].each do |value|
+    [1, true, "true", "TRUE", "1", "t", "T"].each do |value|
       it "returns true for the value #{value}" do
         expect(Trueman.truthy?(value)).to eq true
       end
