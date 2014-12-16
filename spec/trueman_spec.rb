@@ -5,6 +5,23 @@ describe Trueman do
     expect(Trueman::VERSION).not_to be nil
   end
 
+  describe 'updating truthy values' do
+    before { Trueman.true_values << 'foo' }
+
+    it "allows a new value" do
+      expect(Trueman.truthy?('foo')).to eq true
+      expect(Trueman.truthy?('bar')).not_to eq true
+    end
+  end
+
+  describe 'updating falsy values' do
+    before { Trueman.false_values << 'bar' }
+
+    it "allows a new value" do
+      expect(Trueman.truthy?('bar')).to eq false
+    end
+  end
+
   describe 'determine a falsy value' do
     it 'returns true with the false object' do
       expect(Trueman.falsy?(false)).to eq true

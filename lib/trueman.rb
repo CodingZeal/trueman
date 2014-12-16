@@ -5,10 +5,18 @@ module Trueman
   FALSE_VALUES = [false, 0, '0', 'f', 'F', 'false', 'FALSE']
 
   def self.truthy?(value)
-    TRUE_VALUES.include? value
+    true_values.include? value
   end
 
   def self.falsy?(value)
-    FALSE_VALUES.include? value
+    false_values.include? value
+  end
+
+  def self.true_values
+    @@true_values ||= TRUE_VALUES
+  end
+
+  def self.false_values
+    @@false_values ||= FALSE_VALUES
   end
 end
