@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Sean Culver", "Adam Cuppy"]
   spec.email         = ["sean@codingzeal.com", "adam@codingzeal.com"]
   spec.summary       = %q{Easily assert truthy and falsy values on strings integers}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/CodingZeal/trueman"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
